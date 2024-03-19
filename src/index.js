@@ -5,7 +5,11 @@ const locationInput = document.querySelector('input')
 
 form.addEventListener('submit', (event) => {
     event.preventDefault()
-    getWeatherData(locationInput.value).then((r) => {
-        console.log(r)
-    })
+    getWeatherData(locationInput.value)
+        .then((r) => {
+            console.log(r)
+        })
+        .catch((err) => {
+            console.error(err)
+        })
 })
