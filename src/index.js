@@ -1,5 +1,6 @@
 import getWeatherData from './api_functions'
 import setContentToDom from './dom_functions'
+import './assets/style.css'
 
 const form = document.querySelector('form')
 const locationInput = document.querySelector('input#location-input')
