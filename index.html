@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Weather App</title>
+    </head>
+    <body>
+        <form action="">
+            <div class="field">
+                <label for="location">Enter location</label>
+                <input
+                    type="text"
+                    name="locaton"
+                    id="location-input"
+                    autocomplete="off"
+                    requried
+                />
+            </div>
+            <div class="buttons">
+                <button type="submit">Get weather</button>
+                <button id="switch_units" type="button">Switch to °F</button>
+            </div>
+            <p id="error"></p>
+        </form>
+
+        <div class="weather">
+            <span id="location"></span>
+            <div class="info">
+                <span>Temperature: </span>
+                <span id="temperature"></span>
+            </div>
+            <div class="info">
+                <span>Feels Like: </span>
+                <span id="feels_like"></span>
+            </div>
+            <div class="info">
+                <span>Humidity: </span>
+                <span id="humidity"></span>
+            </div>
+            <div class="info">
+                <span>Wind Direction: </span>
+                <span id="wind_dir"></span>
+            </div>
+            <div class="info">
+                <span>Wind Speed: </span>
+                <span id="wind_speed"></span>
+            </div>
+        </div>
+    <script defer src="main.js"></script></body>
+</html>
