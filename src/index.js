@@ -9,11 +9,11 @@ const switchUnitsBtn = document.querySelector('#switch_units')
 let weatherData
 let celsius = true
 
-const showWeather = () => {
-    getWeatherData(locationInput.value)
+const showWeather = (location, showInCelsius) => {
+    getWeatherData(location)
         .then((r) => {
             weatherData = r
-            setContentToDom(weatherData, celsius)
+            setContentToDom(weatherData, showInCelsius)
             error.textContent = ''
         })
         .catch((err) => {
@@ -36,5 +36,8 @@ switchUnitsBtn.addEventListener('click', () => {
 
 form.addEventListener('submit', (event) => {
     event.preventDefault()
-    showWeather()
+    showWeather(locationInput.value, celsius)
 })
+
+// on initial load show weather of delhi
+showWeather('New Delhi', celsius)
